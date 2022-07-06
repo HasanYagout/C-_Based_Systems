@@ -18,7 +18,7 @@ namespace Hotel_Management_System
             Application.SetCompatibleTextRenderingDefault(false);
             Users g = new Users();
             g.addUser();
-            Application.Run(new Form1());
+            Application.Run(new Login());
             
             
         }

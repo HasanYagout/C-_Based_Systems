@@ -12,7 +12,7 @@ namespace Hotel_Management_System
     {
         public void addUser()
         {
-            Form1 form1 = new Form1();
+            Login form1 = new Login();
             bool success = form1.InsertAdminUser(form1);
             
             

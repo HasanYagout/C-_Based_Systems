@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Hotel_Management_System
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
         private const string InsertQuery = "insert into Users (username,password,status) values(@User, @Pass, @Stat)";
         private const string SelectQuery = "select username,password,status from Users";
@@ -21,7 +21,7 @@ namespace Hotel_Management_System
         public string pass { get; set; }
         public string sta { get; set; }
 
-       public Form1()
+       public Login()
         {
             InitializeComponent();
         }
@@ -29,13 +29,7 @@ namespace Hotel_Management_System
         private void Login_button_click(object sender, EventArgs e)
         {
             ValidateUser();
-            this.Dispose();
-            MainWindow mainwindow = new MainWindow();
-            mainwindow.Show();
-            
-            
-            
-            
+            this.Visible = false;
             
             
             
@@ -62,7 +56,7 @@ namespace Hotel_Management_System
             }
             return datatable;
         }
-        public bool InsertAdminUser(Form1 user)
+        public bool InsertAdminUser(Login user)
         {
             int rows;
             using (SqlConnection connection = new SqlConnection(DataBasePath))
@@ -70,7 +64,7 @@ namespace Hotel_Management_System
                 connection.Open();
                 using (SqlCommand command = new SqlCommand(InsertQuery, connection))
                 {
-                    Form1 form1 = new Form1();
+                    Login form1 = new Login();
 
                     command.Parameters.AddWithValue("@User", "hasan");
                     command.Parameters.AddWithValue("@Pass", "123");
@@ -131,6 +125,18 @@ namespace Hotel_Management_System
         private void Register_Button_Click(object sender, EventArgs e)
         {
             
+        }
+
+       
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
        
 
