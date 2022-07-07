@@ -16,11 +16,15 @@ namespace Hotel_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Users g = new Users();
-            g.addUser();
+            
+            Login g = new Login();
+            
+
             Application.Run(new Login());
+            g.Validate();
             
             
         }
+       
     }
 }

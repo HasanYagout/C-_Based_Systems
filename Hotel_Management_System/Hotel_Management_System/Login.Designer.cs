@@ -34,7 +34,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.Login_button = new System.Windows.Forms.Button();
-            this.Clear_button = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.my_DataBaseDataSet1 = new Hotel_Management_System.My_DataBaseDataSet1();
@@ -57,7 +56,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(100, 134);
+            this.label1.Location = new System.Drawing.Point(114, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 17);
             this.label1.TabIndex = 2;
@@ -67,7 +66,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(104, 202);
+            this.label2.Location = new System.Drawing.Point(114, 202);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 17);
             this.label2.TabIndex = 3;
@@ -75,7 +74,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(103, 154);
+            this.textBox1.Location = new System.Drawing.Point(117, 154);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(266, 30);
@@ -83,7 +82,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(103, 222);
+            this.textBox2.Location = new System.Drawing.Point(117, 222);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
@@ -100,27 +99,13 @@
             this.Login_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Login_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Login_button.ForeColor = System.Drawing.Color.White;
-            this.Login_button.Location = new System.Drawing.Point(103, 289);
+            this.Login_button.Location = new System.Drawing.Point(117, 291);
             this.Login_button.Name = "Login_button";
             this.Login_button.Size = new System.Drawing.Size(267, 53);
             this.Login_button.TabIndex = 6;
             this.Login_button.Text = "Login";
             this.Login_button.UseVisualStyleBackColor = false;
             this.Login_button.Click += new System.EventHandler(this.Login_button_click);
-            // 
-            // Clear_button
-            // 
-            this.Clear_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(71)))));
-            this.Clear_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Clear_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clear_button.ForeColor = System.Drawing.Color.White;
-            this.Clear_button.Location = new System.Drawing.Point(103, 348);
-            this.Clear_button.Name = "Clear_button";
-            this.Clear_button.Size = new System.Drawing.Size(268, 53);
-            this.Clear_button.TabIndex = 7;
-            this.Clear_button.Text = "Clear";
-            this.Clear_button.UseVisualStyleBackColor = false;
-            this.Clear_button.Click += new System.EventHandler(this.Clear_button_Click);
             // 
             // errorProvider1
             // 
@@ -154,7 +139,6 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.linkLabel1);
-            this.groupBox1.Controls.Add(this.Clear_button);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.textBox2);
@@ -164,19 +148,20 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(255, 109);
+            this.groupBox1.Location = new System.Drawing.Point(241, 130);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(472, 434);
+            this.groupBox1.Size = new System.Drawing.Size(500, 392);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Login";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel1.Location = new System.Drawing.Point(104, 269);
+            this.linkLabel1.Location = new System.Drawing.Point(114, 255);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(61, 17);
             this.linkLabel1.TabIndex = 9;
@@ -189,7 +174,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(435, 21);
+            this.label4.Location = new System.Drawing.Point(445, 32);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 29);
             this.label4.TabIndex = 8;
@@ -200,7 +185,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(81, 39);
+            this.label3.Location = new System.Drawing.Point(94, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(289, 58);
             this.label3.TabIndex = 7;
@@ -215,6 +200,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(982, 653);
             this.Controls.Add(this.groupBox1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
@@ -240,7 +226,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button Login_button;
-        private System.Windows.Forms.Button Clear_button;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.BindingSource myDataBaseDataSetBindingSource;
         private My_DataBaseDataSet my_DataBaseDataSet;

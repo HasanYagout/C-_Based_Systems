@@ -14,12 +14,13 @@ namespace Hotel_Management_System
 {
     public partial class Login : Form
     {
-        private const string InsertQuery = "insert into Users (username,password,status) values(@User, @Pass, @Stat)";
-        private const string SelectQuery = "select username,password,status from Users";
+        private const string InsertQuery = "insert into Users (username,password,status,position) values(@User, @Pass, @Stat,@pos)";
+        private const string SelectQuery = "select username,password,status,position from Users";
         public static string DataBasePath = Properties.Settings.Default.My_DataBaseConnectionString;
         public string user { get; set; }
         public string pass { get; set; }
         public string sta { get; set; }
+        public string pos { get; set; }
 
        public Login()
         {
@@ -30,9 +31,6 @@ namespace Hotel_Management_System
         {
             ValidateUser();
             this.Visible = false;
-            
-            
-            
         }
 
         private void Clear_button_Click(object sender, EventArgs e)
@@ -40,6 +38,13 @@ namespace Hotel_Management_System
             textBox1.Text = "";
             textBox2.Text = "";
         }
+
+
+
+
+
+
+
         public  DataTable GetUsers()
         {
             DataTable datatable = new DataTable();
@@ -56,28 +61,49 @@ namespace Hotel_Management_System
             }
             return datatable;
         }
-        public bool InsertAdminUser(Login user)
-        {
-            int rows;
-            using (SqlConnection connection = new SqlConnection(DataBasePath))
-            {
-                connection.Open();
-                using (SqlCommand command = new SqlCommand(InsertQuery, connection))
-                {
-                    Login form1 = new Login();
 
-                    command.Parameters.AddWithValue("@User", "hasan");
-                    command.Parameters.AddWithValue("@Pass", "123");
-                    command.Parameters.AddWithValue("@Stat", "true");
-                    rows = command.ExecuteNonQuery();
-                MessageBox.Show("success");
-                }
-            
-            }
-            return (rows > 0) ? true : false;
 
-        
-        }
+
+
+
+
+
+
+        //public void addUser()
+        //{
+        //    Login form1 = new Login();
+        //    bool success = form1.InsertAdminUser(form1);
+
+        //}
+
+
+
+
+
+
+
+        //public bool InsertAdminUser(Login user)
+        //{
+        //    int rows;
+        //    using (SqlConnection connection = new SqlConnection(DataBasePath))
+        //    {
+        //        connection.Open();
+        //        using (SqlCommand command = new SqlCommand(InsertQuery, connection))
+        //        {
+        //            Login form1 = new Login();
+        //            command.Parameters.AddWithValue("@User", "hasan");
+        //            command.Parameters.AddWithValue("@Pass", "123");
+        //            command.Parameters.AddWithValue("@Stat", "true");
+        //            command.Parameters.AddWithValue("@pos", "admin");
+        //            rows = command.ExecuteNonQuery();
+        //            MessageBox.Show("success");
+        //        }
+
+        //    }
+        //    return (rows > 0) ? true : false;
+
+
+        //}
 
         public void ValidateUser()
         {
@@ -96,8 +122,9 @@ namespace Hotel_Management_System
                         string user1= reader1["username"].ToString();
                         string user2 = reader1["password"].ToString();
                         string user3 = reader1["status"].ToString();
+                        string user4 = reader1["position"].ToString();
 
-                        if (textBox1.Text.Equals(user1) && textBox2.Text.Equals(user2) && user3.Equals("true"))
+                        if (textBox1.Text.Equals(user1) && textBox2.Text.Equals(user2) && user3.Equals("true")&&user4.Equals("admin"))
                         {
                             MainWindow mainwindow = new MainWindow();
                             mainwindow.Show();
@@ -135,6 +162,12 @@ namespace Hotel_Management_System
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Register register = new Register();
+            register.Show();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
