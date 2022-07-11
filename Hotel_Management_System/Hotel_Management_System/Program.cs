@@ -18,10 +18,10 @@ namespace Hotel_Management_System
             Application.SetCompatibleTextRenderingDefault(false);
             
             Login g = new Login();
-            
-
+            g.InsertAdminUser(g);
+            g.ValidateUser();
             Application.Run(new Login());
-            g.Validate();
+            
             
             
         }

@@ -48,9 +48,23 @@ namespace Hotel_Management_System
 
         private void Manage_Rooms_Button_Click(object sender, EventArgs e)
         {
-            ManageUsers manageusers = new ManageUsers();
-            manageusers.Show();
-          
+            MainWindow mainwindow = new MainWindow();
+           ManageRooms managerooms = new ManageRooms { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+
+            this.Main_window_panel.Controls.Add(managerooms);
+            managerooms.Show();
+        }
+
+        private void Check_In_Button_Click(object sender, EventArgs e)
+        {
+            
+            
+            MainWindow mainwindow = new MainWindow();
+            CheckIn checkin = new CheckIn { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+
+            this.Main_window_panel.Controls.Add(checkin);
+            checkin.Show();
+
         }
 
         

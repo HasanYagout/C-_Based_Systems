@@ -69,41 +69,41 @@ namespace Hotel_Management_System
 
 
 
-        //public void addUser()
-        //{
-        //    Login form1 = new Login();
-        //    bool success = form1.InsertAdminUser(form1);
+        public void addUser()
+        {
+            Login form1 = new Login();
+            bool success = form1.InsertAdminUser(form1);
 
-        //}
-
-
+        }
 
 
 
 
 
-        //public bool InsertAdminUser(Login user)
-        //{
-        //    int rows;
-        //    using (SqlConnection connection = new SqlConnection(DataBasePath))
-        //    {
-        //        connection.Open();
-        //        using (SqlCommand command = new SqlCommand(InsertQuery, connection))
-        //        {
-        //            Login form1 = new Login();
-        //            command.Parameters.AddWithValue("@User", "hasan");
-        //            command.Parameters.AddWithValue("@Pass", "123");
-        //            command.Parameters.AddWithValue("@Stat", "true");
-        //            command.Parameters.AddWithValue("@pos", "admin");
-        //            rows = command.ExecuteNonQuery();
-        //            MessageBox.Show("success");
-        //        }
-
-        //    }
-        //    return (rows > 0) ? true : false;
 
 
-        //}
+        public bool InsertAdminUser(Login user)
+        {
+            int rows;
+            using (SqlConnection connection = new SqlConnection(DataBasePath))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(InsertQuery, connection))
+                {
+                    Login form1 = new Login();
+                    command.Parameters.AddWithValue("@User", "hasan");
+                    command.Parameters.AddWithValue("@Pass", "123");
+                    command.Parameters.AddWithValue("@Stat", "true");
+                    command.Parameters.AddWithValue("@pos", "admin");
+                    rows = command.ExecuteNonQuery();
+                    MessageBox.Show("success");
+                }
+
+            }
+            return (rows > 0) ? true : false;
+
+
+        }
 
         public void ValidateUser()
         {
@@ -168,6 +168,16 @@ namespace Hotel_Management_System
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

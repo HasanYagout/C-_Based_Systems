@@ -49,6 +49,7 @@
             this.Check_In_Button.TabIndex = 0;
             this.Check_In_Button.Text = "Check In";
             this.Check_In_Button.UseVisualStyleBackColor = false;
+            this.Check_In_Button.Click += new System.EventHandler(this.Check_In_Button_Click);
             // 
             // Check_Out_Button
             // 

@@ -133,6 +133,16 @@ namespace Hotel_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Lawrencium {
+            get {
+                object obj = ResourceManager.GetObject("Lawrencium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap managerooms {
             get {
                 object obj = ResourceManager.GetObject("managerooms", resourceCulture);
