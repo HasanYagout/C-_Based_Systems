@@ -20,10 +20,12 @@ namespace Hotel_Management_System
         private void Users_Button_Click(object sender, EventArgs e)
         {
             MainWindow mainwindow = new MainWindow();
-            ManageUsers manageusers= new ManageUsers { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            ManageUsers manageusers = new ManageUsers { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             
             this.Main_window_panel.Controls.Add(manageusers);
+            
             manageusers.Show();
+            
             
         }
 
@@ -58,7 +60,6 @@ namespace Hotel_Management_System
         private void Check_In_Button_Click(object sender, EventArgs e)
         {
             
-            
             MainWindow mainwindow = new MainWindow();
             CheckIn checkin = new CheckIn { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
 
@@ -66,6 +67,8 @@ namespace Hotel_Management_System
             checkin.Show();
 
         }
+
+       
 
         
     }

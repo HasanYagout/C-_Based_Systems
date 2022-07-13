@@ -87,6 +87,11 @@ namespace Hotel_Management_System
                 MessageBox.Show(@"error occured. please try again...");
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         }
 
        

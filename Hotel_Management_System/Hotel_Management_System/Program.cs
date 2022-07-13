@@ -19,7 +19,7 @@ namespace Hotel_Management_System
             
             Login g = new Login();
             g.InsertAdminUser(g);
-            g.ValidateUser();
+            
             Application.Run(new Login());
             
             

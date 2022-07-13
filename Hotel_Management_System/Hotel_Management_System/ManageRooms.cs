@@ -53,7 +53,7 @@ namespace Hotel_Management_System
 
 
 
-        public void connection()
+        public void connection( ManageRooms managerooms)
         {
              using(SqlConnection connection = new SqlConnection(DataBasePath))
                 {
@@ -90,9 +90,9 @@ namespace Hotel_Management_System
             managerooms.btype=comboBox2.GetItemText(comboBox2.SelectedItem);
             managerooms.pri=textBox4.Text;
             managerooms.stat = "unbooked";
+            connection(managerooms);
             dataGridView1.DataSource = GetRooms();
-
-            connection();
+            
 
         }
 
@@ -102,5 +102,6 @@ namespace Hotel_Management_System
             this.roomsTableAdapter.Fill(this.my_DataBaseDataSet4.Rooms);
 
         }
+
     }
 }

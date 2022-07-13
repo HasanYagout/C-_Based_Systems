@@ -34,7 +34,6 @@
             this.room_type_label = new System.Windows.Forms.Label();
             this.bed_type_label = new System.Windows.Forms.Label();
             this.price_label = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.room_number_label = new System.Windows.Forms.Label();
             this.add_button = new System.Windows.Forms.Button();
@@ -43,6 +42,7 @@
             this.my_DataBaseDataSet4 = new Hotel_Management_System.My_DataBaseDataSet4();
             this.roomsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.roomsTableAdapter = new Hotel_Management_System.My_DataBaseDataSet4TableAdapters.RoomsTableAdapter();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.my_DataBaseDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).BeginInit();
@@ -91,13 +91,6 @@
             this.price_label.Size = new System.Drawing.Size(39, 17);
             this.price_label.TabIndex = 1;
             this.price_label.Text = "price";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(129, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 2;
             // 
             // textBox4
             // 
@@ -161,6 +154,13 @@
             // 
             this.roomsTableAdapter.ClearBeforeFill = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(129, 23);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 2;
+            // 
             // ManageRooms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -195,7 +195,6 @@
         private System.Windows.Forms.Label room_type_label;
         private System.Windows.Forms.Label bed_type_label;
         private System.Windows.Forms.Label price_label;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label room_number_label;
         private System.Windows.Forms.Button add_button;
@@ -204,5 +203,6 @@
         private My_DataBaseDataSet4 my_DataBaseDataSet4;
         private System.Windows.Forms.BindingSource roomsBindingSource;
         private My_DataBaseDataSet4TableAdapters.RoomsTableAdapter roomsTableAdapter;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
