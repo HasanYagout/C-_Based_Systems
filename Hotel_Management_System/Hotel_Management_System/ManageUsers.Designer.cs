@@ -29,30 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.my_DataBaseDataSet2 = new Hotel_Management_System.My_DataBaseDataSet2();
             this.usersTableAdapter = new Hotel_Management_System.My_DataBaseDataSet2TableAdapters.UsersTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.my_DataBaseDataSet5 = new Hotel_Management_System.My_DataBaseDataSet5();
+            this.myDataBaseDataSet5BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.my_DataBaseDataSet6 = new Hotel_Management_System.My_DataBaseDataSet6();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter1 = new Hotel_Management_System.My_DataBaseDataSet6TableAdapters.UsersTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.positionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.my_DataBaseDataSet2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.my_DataBaseDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myDataBaseDataSet5BindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.my_DataBaseDataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this.my_DataBaseDataSet2;
-            // 
-            // my_DataBaseDataSet2
-            // 
-            this.my_DataBaseDataSet2.DataSetName = "My_DataBaseDataSet2";
-            this.my_DataBaseDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // usersTableAdapter
             // 
@@ -72,6 +68,7 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
             this.usernameDataGridViewTextBoxColumn,
             this.passwordDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn,
@@ -84,6 +81,37 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
+            // 
+            // my_DataBaseDataSet5
+            // 
+            this.my_DataBaseDataSet5.DataSetName = "My_DataBaseDataSet5";
+            this.my_DataBaseDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // myDataBaseDataSet5BindingSource1
+            // 
+            this.myDataBaseDataSet5BindingSource1.DataSource = this.my_DataBaseDataSet5;
+            this.myDataBaseDataSet5BindingSource1.Position = 0;
+            // 
+            // my_DataBaseDataSet6
+            // 
+            this.my_DataBaseDataSet6.DataSetName = "My_DataBaseDataSet6";
+            this.my_DataBaseDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.my_DataBaseDataSet6;
+            // 
+            // usersTableAdapter1
+            // 
+            this.usersTableAdapter1.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // usernameDataGridViewTextBoxColumn
             // 
@@ -105,8 +133,8 @@
             // 
             // positionDataGridViewTextBoxColumn
             // 
-            this.positionDataGridViewTextBoxColumn.DataPropertyName = "Position";
-            this.positionDataGridViewTextBoxColumn.HeaderText = "Position";
+            this.positionDataGridViewTextBoxColumn.DataPropertyName = "position";
+            this.positionDataGridViewTextBoxColumn.HeaderText = "position";
             this.positionDataGridViewTextBoxColumn.Name = "positionDataGridViewTextBoxColumn";
             // 
             // ManageUsers
@@ -119,21 +147,27 @@
             this.Name = "ManageUsers";
             this.Text = "ManageUsers";
             this.Load += new System.EventHandler(this.ManageUsers_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.my_DataBaseDataSet2)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.my_DataBaseDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myDataBaseDataSet5BindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.my_DataBaseDataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private My_DataBaseDataSet2 my_DataBaseDataSet2;
-        private System.Windows.Forms.BindingSource usersBindingSource;
         private My_DataBaseDataSet2TableAdapters.UsersTableAdapter usersTableAdapter;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource myDataBaseDataSet5BindingSource1;
+        private My_DataBaseDataSet5 my_DataBaseDataSet5;
+        private My_DataBaseDataSet6 my_DataBaseDataSet6;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private My_DataBaseDataSet6TableAdapters.UsersTableAdapter usersTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;

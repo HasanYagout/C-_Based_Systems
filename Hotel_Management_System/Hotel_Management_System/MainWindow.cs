@@ -17,15 +17,21 @@ namespace Hotel_Management_System
             InitializeComponent();
         }
 
-        private void Users_Button_Click(object sender, EventArgs e)
+        public void f()
         {
             MainWindow mainwindow = new MainWindow();
             ManageUsers manageusers = new ManageUsers { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            
+
             this.Main_window_panel.Controls.Add(manageusers);
-            
+
             manageusers.Show();
-            
+        
+        }
+
+        private void Users_Button_Click(object sender, EventArgs e)
+        {
+
+            f();
             
         }
 

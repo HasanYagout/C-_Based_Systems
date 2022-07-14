@@ -15,8 +15,9 @@ namespace Hotel_Management_System
     public partial class Login : Form
     {
         private const string InsertQuery = "insert into Users (username,password,status,position) values(@User, @Pass, @Stat,@pos)";
-        private const string SelectQuery = "select username,password,status,position from Users";
+        private const string SelectQuery = "select id, username,password,status,position from Users";
         public static string DataBasePath = Properties.Settings.Default.My_DataBaseConnectionString;
+        public string Id { get; set; }
         public string user { get; set; }
         public string pass { get; set; }
         public string sta { get; set; }
@@ -124,7 +125,7 @@ namespace Hotel_Management_System
                         string user3 = reader1["status"].ToString();
                         string user4 = reader1["position"].ToString();
 
-                        if (textBox1.Text.Equals(user1) && textBox2.Text.Equals(user2) && user3.Equals("true")&&user4.Equals("admin"))
+                        if (textBox1.Text.Equals(user1) && textBox2.Text.Equals(user2) && user3.Equals("true"))
                         {
                             MainWindow mainwindow = new MainWindow();
                             mainwindow.Show();

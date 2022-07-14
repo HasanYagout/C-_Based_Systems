@@ -92,6 +92,13 @@ namespace Hotel_Management_System
 
         }
 
+        private void Register_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'my_DataBaseDataSet5.Users' table. You can move, or remove it, as needed.
+            this.usersTableAdapter.Fill(this.my_DataBaseDataSet5.Users);
+
+        }
+
         }
 
        

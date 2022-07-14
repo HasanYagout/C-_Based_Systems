@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Register_Name_Label = new System.Windows.Forms.Label();
             this.Register_Password_Label = new System.Windows.Forms.Label();
             this.Register_Name_TextBox = new System.Windows.Forms.TextBox();
@@ -35,7 +36,12 @@
             this.Register_Sign_Up_Button = new System.Windows.Forms.Button();
             this.Register_Clear_Button = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.my_DataBaseDataSet5 = new Hotel_Management_System.My_DataBaseDataSet5();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter = new Hotel_Management_System.My_DataBaseDataSet5TableAdapters.UsersTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.my_DataBaseDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Register_Name_Label
@@ -102,6 +108,20 @@
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // my_DataBaseDataSet5
+            // 
+            this.my_DataBaseDataSet5.DataSetName = "My_DataBaseDataSet5";
+            this.my_DataBaseDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.my_DataBaseDataSet5;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -117,7 +137,10 @@
             this.Controls.Add(this.Register_Name_Label);
             this.Name = "Register";
             this.Text = "Register";
+            this.Load += new System.EventHandler(this.Register_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.my_DataBaseDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,5 +155,8 @@
         private System.Windows.Forms.Button Register_Sign_Up_Button;
         private System.Windows.Forms.Button Register_Clear_Button;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private My_DataBaseDataSet5 my_DataBaseDataSet5;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private My_DataBaseDataSet5TableAdapters.UsersTableAdapter usersTableAdapter;
     }
 }
