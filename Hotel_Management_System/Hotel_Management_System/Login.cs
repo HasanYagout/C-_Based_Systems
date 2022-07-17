@@ -46,28 +46,26 @@ namespace Hotel_Management_System
 
 
 
-        public  DataTable GetUsers()
-        {
-            DataTable datatable = new DataTable();
-            using (SqlConnection con = new SqlConnection(DataBasePath))
-            {
-                con.Open();
-                using (SqlCommand com = new SqlCommand(SelectQuery, con))
-                {
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(com))
-                    {
-                        adapter.Fill(datatable);
-                    }
-                }
-            }
-            return datatable;
-        }
+        //public  DataTable GetUsers()
+        //{
+        //    DataTable datatable = new DataTable();
+        //    using (SqlConnection con = new SqlConnection(DataBasePath))
+        //    {
+        //        con.Open();
+        //        using (SqlCommand com = new SqlCommand(SelectQuery, con))
+        //        {
+        //            using (SqlDataAdapter adapter = new SqlDataAdapter(com))
+        //            {
+        //                adapter.Fill(datatable);
+        //            }
+        //        }
+        //    }
+        //    return datatable;
+        //}
 
 
 
-
-
-
+       
 
 
         public void addUser()
@@ -111,9 +109,9 @@ namespace Hotel_Management_System
             using (SqlConnection connection = new SqlConnection(DataBasePath))
             {
                 connection.Open();
-                using (SqlCommand command = new SqlCommand(SelectQuery, connection))
+                using (SqlCommand command = new SqlCommand("select * from users where username ='"+textBox1.Text+"' and password ='"+textBox2.Text+"' and status ='true' ", connection))
                 {
-                    
+                  
                     //command.Parameters.AddWithValue();
                         SqlDataReader reader1;
                     reader1=command.ExecuteReader();
@@ -150,10 +148,7 @@ namespace Hotel_Management_System
 
         }
 
-        private void Register_Button_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
 
        
 
@@ -168,20 +163,7 @@ namespace Hotel_Management_System
             register.Show();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
        
 
         

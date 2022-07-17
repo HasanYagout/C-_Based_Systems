@@ -119,11 +119,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>My_DataBaseDataSet5.xsd</DependentUpon>
     </Compile>
-    <Compile Include="My_DataBaseDataSet6.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>My_DataBaseDataSet6.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.cs">
@@ -131,6 +126,11 @@
     </Compile>
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users_dataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Users_dataset.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CheckIn.resx">
       <DependentUpon>CheckIn.cs</DependentUpon>
@@ -226,17 +226,6 @@
     <None Include="My_DataBaseDataSet5.xss">
       <DependentUpon>My_DataBaseDataSet5.xsd</DependentUpon>
     </None>
-    <None Include="My_DataBaseDataSet6.xsc">
-      <DependentUpon>My_DataBaseDataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="My_DataBaseDataSet6.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>My_DataBaseDataSet6.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="My_DataBaseDataSet6.xss">
-      <DependentUpon>My_DataBaseDataSet6.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -246,6 +235,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Users_dataset.xsc">
+      <DependentUpon>Users_dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Users_dataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Users_dataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Users_dataset.xss">
+      <DependentUpon>Users_dataset.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

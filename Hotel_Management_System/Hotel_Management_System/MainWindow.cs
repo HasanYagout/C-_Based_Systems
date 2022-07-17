@@ -22,7 +22,6 @@ namespace Hotel_Management_System
             MainWindow mainwindow = new MainWindow();
             ManageUsers manageusers = new ManageUsers { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
 
-            this.Main_window_panel.Controls.Add(manageusers);
 
             manageusers.Show();
         
@@ -59,7 +58,6 @@ namespace Hotel_Management_System
             MainWindow mainwindow = new MainWindow();
            ManageRooms managerooms = new ManageRooms { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
 
-            this.Main_window_panel.Controls.Add(managerooms);
             managerooms.Show();
         }
 
@@ -67,9 +65,9 @@ namespace Hotel_Management_System
         {
             
             MainWindow mainwindow = new MainWindow();
-            CheckIn checkin = new CheckIn { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            CheckIn checkin = new CheckIn();
 
-            this.Main_window_panel.Controls.Add(checkin);
+
             checkin.Show();
 
         }

@@ -45,6 +45,24 @@ namespace Hotel_Management_System
             return datatable;
         }
 
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         public bool InsertUser(Register user)
         {
             int rows;
@@ -77,10 +95,10 @@ namespace Hotel_Management_System
             user1.pos = "user";
             bool success = InsertUser(user1);
             dataGridView1.DataSource = GetUsers();
-             if (success)
+            if (success)
             {
 
-                
+
                 MessageBox.Show(@"user has been added successfully");
             }
             else
@@ -99,18 +117,20 @@ namespace Hotel_Management_System
 
         }
 
-        }
-
-       
-        }
-
-     
 
 
+    }
 
 
-        
+}
 
-       
-    
+
+
+
+
+
+
+
+
+
 

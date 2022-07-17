@@ -7,40 +7,91 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using System.Data.Sql;
+using System.Data.SqlClient;
 
 namespace Hotel_Management_System
 {
     public partial class ManageUsers : Form
     {
+       
         public string Id { get; set; }
-        public string user { get; set; }
-        public string pas { get; set; }
-        public string sta { get; set; }
-        public string po { get; set; }
-        
+        public string username { get; set; }
+        public string password { get; set; }
+        public string status { get; set; }
+        public string position { get; set; }
+        private const string SelectQuery = "select id as ID , username, password, status,position from Users";
+        private const string UpdateQuery = "update Users set username = @username, position =@position, status ='true' where id = @ID";
         public static string DataBasePath = Properties.Settings.Default.My_DataBaseConnectionString;
-        private const string SelectQuery = "select id,username,password,status,position from Users";
-        private const string UpdateQuery = "update Users set username=@user,password=@pas,status=@sta,position=@po where id =@ID";
-
-
 
         public ManageUsers()
         {
             InitializeComponent();
         }
 
+        private void ManageUsers_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'users_dataset.Users' table. You can move, or remove it, as needed.
+            this.usersTableAdapter.Fill(this.users_dataset.Users);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("grant access ?","confirm", MessageBoxButtons.YesNo);
+           if (result == DialogResult.Yes)
+           {
+              
+                
+           }
+        }
+
+        public void updateuser(ManageUsers user)
+        {
+
+            using (SqlConnection connection = new SqlConnection(DataBasePath))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(UpdateQuery, connection))
+                {
+
+                    command.Parameters.AddWithValue("@id", user.Id);
+                    command.Parameters.AddWithValue("@username", user.username);
+                    command.Parameters.AddWithValue("@status", user.status);
+                    command.Parameters.AddWithValue("@position", user.position);
+                    command.ExecuteNonQuery();
+
+
+
+                }
+
+            }
+        
+        }
+
+
 
         public static DataTable GetUsers()
         {
             DataTable datatable = new DataTable();
-            using (SqlConnection con = new SqlConnection(DataBasePath))
+            using (SqlConnection connection = new SqlConnection(DataBasePath))
             {
-                con.Open();
-                using (SqlCommand com = new SqlCommand(SelectQuery, con))
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(SelectQuery, connection))
                 {
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(com))
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
                     {
                         adapter.Fill(datatable);
                     }
@@ -48,98 +99,34 @@ namespace Hotel_Management_System
             }
             return datatable;
         }
-           
 
 
-        private void ManageUsers_Load(object sender, EventArgs e)
+
+
+        private void button2_Click(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'my_DataBaseDataSet6.Users' table. You can move, or remove it, as needed.
-            this.usersTableAdapter1.Fill(this.my_DataBaseDataSet6.Users);
-            // TODO: This line of code loads data into the 'my_DataBaseDataSet2.Users' table. You can move, or remove it, as needed.
-
+            ManageUsers user = new ManageUsers();
+            user.Id = label6.Text;
+            user.username = textBox1.Text;
+            user.position = comboBox1.GetItemText(comboBox1.SelectedIndex);
+            user.status = comboBox2.GetItemText(comboBox2.SelectedItem);
+            user.updateuser(user);
+            dataGridView1.DataSource = GetUsers();
+            MessageBox.Show(@"user has been added successfully");
+            
+            
         }
-
-
-
-
-
-        public bool UpdateUser(ManageUsers user1)
-        {
-            int rows;
-            using (SqlConnection connection = new SqlConnection(DataBasePath))
-            {
-                connection.Open();
-                using (SqlCommand command = new SqlCommand(UpdateQuery, connection))
-                {
-
-                    command.Parameters.AddWithValue("@Id", Id);
-                    command.Parameters.AddWithValue("@user", user);
-                    command.Parameters.AddWithValue("@pas", pas);
-                    command.Parameters.AddWithValue("@sta", sta);
-                    command.Parameters.AddWithValue("@po", po);
-                    rows= command.ExecuteNonQuery();
-                }
-
-            }
-            return (rows > 0) ? true : false;
-
-        }
-
-
-
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-             
-
-            using(SqlConnection connection = new SqlConnection(DataBasePath))
-            {
-                
-                DialogResult result = new System.Windows.Forms.DialogResult();
-                connection.Open();
-                using (SqlCommand command = new SqlCommand(SelectQuery, connection))
-                {
-                    SqlDataReader reader = command.ExecuteReader();
-                  result=  MessageBox.Show("do you want to grant access to this user","confirm",MessageBoxButtons.YesNo);
-
-                  if (reader.Read())
-                  {
-
-                      string uu = reader["id"].ToString();
-                      string uu2 = reader["username"].ToString();
-                      string uu3 = reader["password"].ToString();
-                      string uu4 = reader["status"].ToString();
-                      string uu5 = reader["position"].ToString();
-
-                      if (result == DialogResult.Yes)
-                      {
-                          ManageUsers user1 = new ManageUsers();
-                          user1.Id = uu;
-                          user1.user = uu2;
-                          user1.pas = uu3;
-                          user1.sta = "true";
-                          user1.po = uu5;
-                          MessageBox.Show("success");
-                      }
-                  
-                  
-                  }
-                    
-                }
-
+            var index = e.RowIndex;
+            label6.Text = dataGridView1.Rows[index].Cells[0].Value.ToString();
+            textBox1.Text = dataGridView1.Rows[index].Cells[1].Value.ToString();
+            comboBox2.Text = dataGridView1.Rows[index].Cells[2].Value.ToString();
+            comboBox1.Text = dataGridView1.Rows[index].Cells[3].Value.ToString();
             
-            }
-            
-          
-                
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        
-
+       
     }
 }

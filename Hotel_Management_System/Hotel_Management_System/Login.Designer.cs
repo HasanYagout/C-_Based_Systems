@@ -79,7 +79,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(266, 30);
             this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -156,7 +155,6 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Login";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // linkLabel1
             // 
@@ -193,7 +191,6 @@
             this.label3.Size = new System.Drawing.Size(289, 58);
             this.label3.TabIndex = 7;
             this.label3.Text = "Login Form";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Login
             // 

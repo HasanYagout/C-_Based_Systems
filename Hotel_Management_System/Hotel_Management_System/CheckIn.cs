@@ -75,5 +75,18 @@ namespace Hotel_Management_System
             }
         }
 
+        private void checkInToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CheckIn checkin = new CheckIn();
+            checkin.Show();
+            
+        }
+
+        private void manageUsersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageUsers manageusers = new ManageUsers();
+            manageusers.Show();
+        }
+
     }
 }
