@@ -21,7 +21,7 @@ namespace Hotel_Management_System
         public string status { get; set; }
         public string position { get; set; }
         private const string SelectQuery = "select id as ID , username, password, status,position from Users";
-        private const string UpdateQuery = "update Users set username = @username, position =@position, status ='true' where id = @ID";
+        private const string UpdateQuery = "update Users set username = @username, position =@position, status ='true' , where id = @ID";
         public static string DataBasePath = Properties.Settings.Default.My_DataBaseConnectionString;
 
         public ManageUsers()
@@ -48,15 +48,7 @@ namespace Hotel_Management_System
             
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DialogResult result = MessageBox.Show("grant access ?","confirm", MessageBoxButtons.YesNo);
-           if (result == DialogResult.Yes)
-           {
-              
-                
-           }
-        }
+        
 
         public void updateuser(ManageUsers user)
         {
@@ -108,8 +100,8 @@ namespace Hotel_Management_System
             ManageUsers user = new ManageUsers();
             user.Id = label6.Text;
             user.username = textBox1.Text;
-            user.position = comboBox1.GetItemText(comboBox1.SelectedIndex);
             user.status = comboBox2.GetItemText(comboBox2.SelectedItem);
+            user.position = comboBox1.GetItemText(comboBox1.SelectedIndex);
             user.updateuser(user);
             dataGridView1.DataSource = GetUsers();
             MessageBox.Show(@"user has been added successfully");
@@ -125,6 +117,11 @@ namespace Hotel_Management_System
             comboBox2.Text = dataGridView1.Rows[index].Cells[2].Value.ToString();
             comboBox1.Text = dataGridView1.Rows[index].Cells[3].Value.ToString();
             
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
        

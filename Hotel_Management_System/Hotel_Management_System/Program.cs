@@ -19,7 +19,8 @@ namespace Hotel_Management_System
             
             Login g = new Login();
             g.InsertAdminUser(g);
-            
+            CheckIn checkin = new CheckIn();
+            checkin.setting_id();
             Application.Run(new Login());
             
             

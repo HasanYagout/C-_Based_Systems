@@ -103,6 +103,16 @@ namespace Hotel_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gradient_blue {
+            get {
+                object obj = ResourceManager.GetObject("gradient-blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gradient_img {
             get {
                 object obj = ResourceManager.GetObject("gradient_img", resourceCulture);
@@ -146,6 +156,26 @@ namespace Hotel_Management_System.Properties {
         internal static System.Drawing.Bitmap managerooms {
             get {
                 object obj = ResourceManager.GetObject("managerooms", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pinot_Noir {
+            get {
+                object obj = ResourceManager.GetObject("Pinot Noir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Titanium {
+            get {
+                object obj = ResourceManager.GetObject("Titanium", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

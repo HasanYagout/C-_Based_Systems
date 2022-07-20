@@ -28,114 +28,140 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Check_In_Button = new System.Windows.Forms.Button();
-            this.Check_Out_Button = new System.Windows.Forms.Button();
-            this.Manage_Rooms_Button = new System.Windows.Forms.Button();
-            this.Log_Out_Button = new System.Windows.Forms.Button();
-            this.Users_Button = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.checkInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageRoomsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Check_In_Button
+            // contextMenuStrip1
             // 
-            this.Check_In_Button.BackColor = System.Drawing.Color.Transparent;
-            this.Check_In_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Check_In_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Check_In_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Check_In_Button.ForeColor = System.Drawing.Color.White;
-            this.Check_In_Button.Location = new System.Drawing.Point(29, 13);
-            this.Check_In_Button.Name = "Check_In_Button";
-            this.Check_In_Button.Size = new System.Drawing.Size(216, 102);
-            this.Check_In_Button.TabIndex = 0;
-            this.Check_In_Button.Text = "Check In";
-            this.Check_In_Button.UseVisualStyleBackColor = false;
-            this.Check_In_Button.Click += new System.EventHandler(this.Check_In_Button_Click);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // Check_Out_Button
+            // contextMenuStrip2
             // 
-            this.Check_Out_Button.BackColor = System.Drawing.Color.Transparent;
-            this.Check_Out_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Check_Out_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Check_Out_Button.ForeColor = System.Drawing.Color.White;
-            this.Check_Out_Button.Location = new System.Drawing.Point(278, 13);
-            this.Check_Out_Button.Name = "Check_Out_Button";
-            this.Check_Out_Button.Size = new System.Drawing.Size(216, 102);
-            this.Check_Out_Button.TabIndex = 1;
-            this.Check_Out_Button.Text = "Check Out";
-            this.Check_Out_Button.UseVisualStyleBackColor = false;
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
-            // Manage_Rooms_Button
+            // menuStrip1
             // 
-            this.Manage_Rooms_Button.BackColor = System.Drawing.Color.Transparent;
-            this.Manage_Rooms_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Manage_Rooms_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Manage_Rooms_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Manage_Rooms_Button.ForeColor = System.Drawing.Color.White;
-            this.Manage_Rooms_Button.Location = new System.Drawing.Point(527, 13);
-            this.Manage_Rooms_Button.Name = "Manage_Rooms_Button";
-            this.Manage_Rooms_Button.Size = new System.Drawing.Size(216, 102);
-            this.Manage_Rooms_Button.TabIndex = 2;
-            this.Manage_Rooms_Button.Text = "Manage Rooms";
-            this.Manage_Rooms_Button.UseVisualStyleBackColor = false;
-            this.Manage_Rooms_Button.Click += new System.EventHandler(this.Manage_Rooms_Button_Click);
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.checkInToolStripMenuItem,
+            this.checkOutToolStripMenuItem,
+            this.manageRoomsToolStripMenuItem,
+            this.logOutToolStripMenuItem,
+            this.logOutToolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(1, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(577, 28);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // Log_Out_Button
+            // checkInToolStripMenuItem
             // 
-            this.Log_Out_Button.BackColor = System.Drawing.Color.Transparent;
-            this.Log_Out_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Log_Out_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Log_Out_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Log_Out_Button.ForeColor = System.Drawing.Color.White;
-            this.Log_Out_Button.Location = new System.Drawing.Point(1015, 13);
-            this.Log_Out_Button.Name = "Log_Out_Button";
-            this.Log_Out_Button.Size = new System.Drawing.Size(216, 102);
-            this.Log_Out_Button.TabIndex = 2;
-            this.Log_Out_Button.Text = "Log Out";
-            this.Log_Out_Button.UseVisualStyleBackColor = false;
-            this.Log_Out_Button.Click += new System.EventHandler(this.Log_Out_Button_Click);
+            this.checkInToolStripMenuItem.Name = "checkInToolStripMenuItem";
+            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.checkInToolStripMenuItem.Text = "Check In";
+            this.checkInToolStripMenuItem.Click += new System.EventHandler(this.checkInToolStripMenuItem_Click);
             // 
-            // Users_Button
+            // checkOutToolStripMenuItem
             // 
-            this.Users_Button.BackColor = System.Drawing.Color.Transparent;
-            this.Users_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Users_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Users_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Users_Button.ForeColor = System.Drawing.Color.White;
-            this.Users_Button.Location = new System.Drawing.Point(768, 13);
-            this.Users_Button.Name = "Users_Button";
-            this.Users_Button.Size = new System.Drawing.Size(216, 102);
-            this.Users_Button.TabIndex = 2;
-            this.Users_Button.Text = "Users";
-            this.Users_Button.UseVisualStyleBackColor = false;
-            this.Users_Button.Click += new System.EventHandler(this.Users_Button_Click);
+            this.checkOutToolStripMenuItem.Name = "checkOutToolStripMenuItem";
+            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
+            this.checkOutToolStripMenuItem.Text = "Check Out";
+            this.checkOutToolStripMenuItem.Click += new System.EventHandler(this.checkOutToolStripMenuItem_Click);
+            // 
+            // manageRoomsToolStripMenuItem
+            // 
+            this.manageRoomsToolStripMenuItem.Name = "manageRoomsToolStripMenuItem";
+            this.manageRoomsToolStripMenuItem.Size = new System.Drawing.Size(125, 24);
+            this.manageRoomsToolStripMenuItem.Text = "Manage Rooms";
+            this.manageRoomsToolStripMenuItem.Click += new System.EventHandler(this.manageRoomsToolStripMenuItem_Click);
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(114, 24);
+            this.logOutToolStripMenuItem.Text = "Manage Users";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            // 
+            // logOutToolStripMenuItem1
+            // 
+            this.logOutToolStripMenuItem1.Name = "logOutToolStripMenuItem1";
+            this.logOutToolStripMenuItem1.Size = new System.Drawing.Size(74, 24);
+            this.logOutToolStripMenuItem1.Text = "Log Out";
+            this.logOutToolStripMenuItem1.Click += new System.EventHandler(this.logOutToolStripMenuItem1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Location = new System.Drawing.Point(100, 56);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1000, 700);
+            this.panel1.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(1125, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 39);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "X";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Hotel_Management_System.Properties.Resources.gradient;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::Hotel_Management_System.Properties.Resources.Pinot_Noir;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1482, 1033);
-            this.Controls.Add(this.Log_Out_Button);
-            this.Controls.Add(this.Users_Button);
-            this.Controls.Add(this.Manage_Rooms_Button);
-            this.Controls.Add(this.Check_Out_Button);
-            this.Controls.Add(this.Check_In_Button);
+            this.ClientSize = new System.Drawing.Size(1200, 900);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
             this.Name = "MainWindow";
             this.Padding = new System.Windows.Forms.Padding(10);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainWindow";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainWindow_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button Check_In_Button;
-        private System.Windows.Forms.Button Check_Out_Button;
-        private System.Windows.Forms.Button Manage_Rooms_Button;
-        private System.Windows.Forms.Button Log_Out_Button;
-        private System.Windows.Forms.Button Users_Button;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem checkInToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkOutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageRoomsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
 
 
 

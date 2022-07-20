@@ -163,6 +163,11 @@ namespace Hotel_Management_System
             register.Show();
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
        
        
 

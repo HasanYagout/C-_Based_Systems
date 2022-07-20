@@ -18,10 +18,13 @@ namespace Hotel_Management_System
 
        public static string DataBasePath = Properties.Settings.Default.My_DataBaseConnectionString;
        private const string InsertQuery = "insert into CheckIn (CheckInDate,RoomType,RoomNumber,BedType,Name,Phone,Email,IDProof) values(@date, @rtype, @rnum,@btype,@nam,@pho,@ema,@proof)";
+       private const string SelectQuery = "select Id,CheckInDate ,RoomType,RoomNumber,BedType,Name,Phone,Email,IDProof from CheckIn";
+    
 
 
         public CheckIn()
         {
+            setting_id();
             InitializeComponent();
             Date_TextBox.Text = DateTime.Today.ToShortDateString();
             Date_TextBox.ReadOnly = true;
@@ -41,12 +44,36 @@ namespace Hotel_Management_System
                     command.Parameters.AddWithValue("@date", Date_TextBox.Text);
                     command.Parameters.AddWithValue("@rtypee", comboBox1.GetItemText(comboBox1.SelectedItem));
                     command.Parameters.AddWithValue("@rnum", comboBox2.GetItemText(comboBox2.SelectedItem));
+                   
                 }
 
             }
         }
 
+        public void setting_id()
+        {
+            using (SqlConnection connection = new SqlConnection(DataBasePath))
 
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(SelectQuery, connection))
+                {
+                    SqlDataReader reader1;
+                    reader1 = command.ExecuteReader();
+                    if (reader1.Read())
+                    {
+                        string user1 = reader1["Id"].ToString();
+                        ID_TextBox.Text = user1;
+                    }
+                    
+                   
+                
+                }
+            
+            
+            }
+           
+        }
 
 
         public void GetRooms()
@@ -86,6 +113,11 @@ namespace Hotel_Management_System
         {
             ManageUsers manageusers = new ManageUsers();
             manageusers.Show();
+        }
+
+        private void ID_Label_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

@@ -72,6 +72,63 @@ namespace Hotel_Management_System
 
         }
 
+        private void checkInToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            CheckIn checkin = new CheckIn() { TopLevel = false, TopMost = true };
+            checkin.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(checkin);
+            checkin.Show();
+        }
+
+        private void checkOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+             
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+
+            ManageUsers manageusers= new ManageUsers() { TopLevel = false, TopMost = true };
+            manageusers.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(manageusers);
+            manageusers.Show();
+        }
+
+        private void manageRoomsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+
+            ManageRooms managerooms = new ManageRooms() { TopLevel = false, TopMost = true };
+            managerooms.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(managerooms);
+            managerooms.Show();
+
+        }
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void logOutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+          DialogResult result=  MessageBox.Show("do you want to log out?","confirm",MessageBoxButtons.YesNo);
+          if (result == DialogResult.Yes)
+          {
+              Login login = new Login();
+              this.Dispose();
+              login.Show();
+          
+          }
+        }
+
        
 
         
