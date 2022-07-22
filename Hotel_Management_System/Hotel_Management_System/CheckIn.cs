@@ -24,7 +24,6 @@ namespace Hotel_Management_System
 
         public CheckIn()
         {
-            setting_id();
             InitializeComponent();
             Date_TextBox.Text = DateTime.Today.ToShortDateString();
             Date_TextBox.ReadOnly = true;
@@ -50,31 +49,7 @@ namespace Hotel_Management_System
             }
         }
 
-        public void setting_id()
-        {
-            using (SqlConnection connection = new SqlConnection(DataBasePath))
-
-            {
-                connection.Open();
-                using (SqlCommand command = new SqlCommand(SelectQuery, connection))
-                {
-                    SqlDataReader reader1;
-                    reader1 = command.ExecuteReader();
-                    if (reader1.Read())
-                    {
-                        string user1 = reader1["Id"].ToString();
-                        ID_TextBox.Text = user1;
-                    }
-                    
-                   
-                
-                }
-            
-            
-            }
-           
-        }
-
+       
 
         public void GetRooms()
         {
@@ -116,6 +91,11 @@ namespace Hotel_Management_System
         }
 
         private void ID_Label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
         {
 
         }
