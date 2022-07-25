@@ -32,13 +32,11 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.number = new System.Windows.Forms.Label();
             this.room_type_label = new System.Windows.Forms.Label();
-            this.bed_type_label = new System.Windows.Forms.Label();
             this.price_label = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.room_number_label = new System.Windows.Forms.Label();
             this.add_button = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.my_DataBaseDataSet4 = new Hotel_Management_System.My_DataBaseDataSet4();
             this.roomsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.roomsTableAdapter = new Hotel_Management_System.My_DataBaseDataSet4TableAdapters.RoomsTableAdapter();
@@ -74,19 +72,10 @@
             this.room_type_label.TabIndex = 1;
             this.room_type_label.Text = "room type";
             // 
-            // bed_type_label
-            // 
-            this.bed_type_label.AutoSize = true;
-            this.bed_type_label.Location = new System.Drawing.Point(30, 152);
-            this.bed_type_label.Name = "bed_type_label";
-            this.bed_type_label.Size = new System.Drawing.Size(63, 17);
-            this.bed_type_label.TabIndex = 1;
-            this.bed_type_label.Text = "bed type";
-            // 
             // price_label
             // 
             this.price_label.AutoSize = true;
-            this.price_label.Location = new System.Drawing.Point(30, 202);
+            this.price_label.Location = new System.Drawing.Point(30, 148);
             this.price_label.Name = "price_label";
             this.price_label.Size = new System.Drawing.Size(39, 17);
             this.price_label.TabIndex = 1;
@@ -94,7 +83,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(129, 197);
+            this.textBox4.Location = new System.Drawing.Point(129, 143);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 22);
             this.textBox4.TabIndex = 2;
@@ -122,23 +111,14 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "AC",
-            "No AC"});
+            "standard",
+            "single",
+            "VIP",
+            "King"});
             this.comboBox1.Location = new System.Drawing.Point(129, 87);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 4;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Single",
-            "Double\t\t"});
-            this.comboBox2.Location = new System.Drawing.Point(129, 152);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 5;
             // 
             // my_DataBaseDataSet4
             // 
@@ -166,13 +146,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1014, 494);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.add_button);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.price_label);
-            this.Controls.Add(this.bed_type_label);
             this.Controls.Add(this.room_number_label);
             this.Controls.Add(this.room_type_label);
             this.Controls.Add(this.number);
@@ -193,13 +171,11 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label number;
         private System.Windows.Forms.Label room_type_label;
-        private System.Windows.Forms.Label bed_type_label;
         private System.Windows.Forms.Label price_label;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label room_number_label;
         private System.Windows.Forms.Button add_button;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
         private My_DataBaseDataSet4 my_DataBaseDataSet4;
         private System.Windows.Forms.BindingSource roomsBindingSource;
         private My_DataBaseDataSet4TableAdapters.RoomsTableAdapter roomsTableAdapter;

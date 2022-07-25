@@ -83,7 +83,11 @@ namespace Hotel_Management_System
 
         private void checkOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-             
+            panel1.Controls.Clear();
+            Check_Out checkout = new Check_Out { TopLevel = false, TopMost = true };
+            checkout.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(checkout);
+            checkout.Show();
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)

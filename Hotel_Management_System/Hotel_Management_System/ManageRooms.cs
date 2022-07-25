@@ -15,8 +15,8 @@ namespace Hotel_Management_System
     {
 
                 public static string DataBasePath = Properties.Settings.Default.My_DataBaseConnectionString;
-                private const string InsertQuery = "insert into Rooms (Number,RoomType,BedType,Price,Status) values(@Num,@rtype,@btype,@pri,@stat)";
-                private const string SelectQuery = "select Number,RoomType,BedType,Price,Status from Rooms";
+                private const string InsertQuery = "insert into Rooms (Number,RoomType,Price,Status) values(@Num,@rtype,@pri,@stat)";
+                private const string SelectQuery = "select Number,RoomType,Price,Status from Rooms";
                 public string num { get; set; }
                 public string rtype { get; set; }
                 public string btype { get; set; }
@@ -62,7 +62,6 @@ namespace Hotel_Management_System
                     {
                         command.Parameters.AddWithValue("@num", textBox1.Text);
                         command.Parameters.AddWithValue("@rtype",comboBox1.GetItemText(comboBox1.SelectedItem));
-                        command.Parameters.AddWithValue("@btype",comboBox2.GetItemText(comboBox2.SelectedItem) );
                         command.Parameters.AddWithValue("@pri",textBox4.Text);
                         command.Parameters.AddWithValue("@stat", "unbooked");
                         command.ExecuteNonQuery();
@@ -87,7 +86,6 @@ namespace Hotel_Management_System
             ManageRooms managerooms = new ManageRooms();
             managerooms.num = textBox1.Text;
             managerooms.rtype=comboBox1.GetItemText(comboBox1.SelectedItem);
-            managerooms.btype=comboBox2.GetItemText(comboBox2.SelectedItem);
             managerooms.pri=textBox4.Text;
             managerooms.stat = "unbooked";
             connection(managerooms);
@@ -99,7 +97,7 @@ namespace Hotel_Management_System
         private void ManageRooms_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'my_DataBaseDataSet4.Rooms' table. You can move, or remove it, as needed.
-            this.roomsTableAdapter.Fill(this.my_DataBaseDataSet4.Rooms);
+           
 
         }
 
