@@ -54,6 +54,7 @@
             this.try_label = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Date_TextBox = new System.Windows.Forms.DateTimePicker();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -80,7 +81,6 @@
             this.my_DataBaseDataSet1 = new Hotel_Management_System.My_DataBaseDataSet();
             this.Save_btn = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.Date_TextBox = new System.Windows.Forms.DateTimePicker();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -121,6 +121,7 @@
             this.Price_txb.Name = "Price_txb";
             this.Price_txb.Size = new System.Drawing.Size(121, 22);
             this.Price_txb.TabIndex = 3;
+            this.Price_txb.TextChanged += new System.EventHandler(this.Price_txb_TextChanged);
             // 
             // cb_RoomNumber
             // 
@@ -344,6 +345,13 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Common Information";
+            // 
+            // Date_TextBox
+            // 
+            this.Date_TextBox.Location = new System.Drawing.Point(25, 73);
+            this.Date_TextBox.Name = "Date_TextBox";
+            this.Date_TextBox.Size = new System.Drawing.Size(274, 22);
+            this.Date_TextBox.TabIndex = 6;
             // 
             // contextMenuStrip1
             // 
@@ -628,13 +636,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 10;
-            // 
-            // Date_TextBox
-            // 
-            this.Date_TextBox.Location = new System.Drawing.Point(25, 73);
-            this.Date_TextBox.Name = "Date_TextBox";
-            this.Date_TextBox.Size = new System.Drawing.Size(274, 22);
-            this.Date_TextBox.TabIndex = 6;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // CheckIn
             // 
