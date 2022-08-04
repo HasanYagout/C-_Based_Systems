@@ -30,8 +30,13 @@ namespace Hotel_Management_System
 
         private void Login_button_click(object sender, EventArgs e)
         {
+            
             ValidateUser();
             this.Visible = false;
+            
+          
+           
+           
         }
 
         private void Clear_button_Click(object sender, EventArgs e)
@@ -46,22 +51,7 @@ namespace Hotel_Management_System
 
 
 
-        //public  DataTable GetUsers()
-        //{
-        //    DataTable datatable = new DataTable();
-        //    using (SqlConnection con = new SqlConnection(DataBasePath))
-        //    {
-        //        con.Open();
-        //        using (SqlCommand com = new SqlCommand(SelectQuery, con))
-        //        {
-        //            using (SqlDataAdapter adapter = new SqlDataAdapter(com))
-        //            {
-        //                adapter.Fill(datatable);
-        //            }
-        //        }
-        //    }
-        //    return datatable;
-        //}
+       
 
 
 
@@ -90,10 +80,10 @@ namespace Hotel_Management_System
                 using (SqlCommand command = new SqlCommand(InsertQuery, connection))
                 {
                     Login form1 = new Login();
-                    command.Parameters.AddWithValue("@User", "hasan");
+                    command.Parameters.AddWithValue("@User", "Hasan");
                     command.Parameters.AddWithValue("@Pass", "123");
-                    command.Parameters.AddWithValue("@Stat", "true");
-                    command.Parameters.AddWithValue("@pos", "admin");
+                    command.Parameters.AddWithValue("@Stat", "True");
+                    command.Parameters.AddWithValue("@pos", "Admin");
                     rows = command.ExecuteNonQuery();
                     MessageBox.Show("success");
                 }
@@ -106,10 +96,11 @@ namespace Hotel_Management_System
 
         public void ValidateUser()
         {
+             MainWindow mainwindow = new MainWindow();
             using (SqlConnection connection = new SqlConnection(DataBasePath))
             {
                 connection.Open();
-                using (SqlCommand command = new SqlCommand("select * from users where username ='"+textBox1.Text+"' and password ='"+textBox2.Text+"' and status ='true' ", connection))
+                using (SqlCommand command = new SqlCommand("select * from users where username ='"+textBox1.Text+"' and password ='"+textBox2.Text+"'  ", connection))
                 {
                   
                     //command.Parameters.AddWithValue();
@@ -117,20 +108,42 @@ namespace Hotel_Management_System
                     reader1=command.ExecuteReader();
                     if (reader1.Read())
                     {
-                        
-                        string user1= reader1["username"].ToString();
+                        string user1 = reader1["username"].ToString();
                         string user2 = reader1["password"].ToString();
                         string user3 = reader1["status"].ToString();
                         string user4 = reader1["position"].ToString();
 
-                        if (textBox1.Text.Equals(user1) && textBox2.Text.Equals(user2) && user3.Equals("true"))
+                        if (textBox1.Text.Equals(user1) && textBox2.Text.Equals(user2) && user3.Equals("True") || user4.Equals("Admin")||user4.Equals("User"))
                         {
-                            MainWindow mainwindow = new MainWindow();
+                            MessageBox.Show(user1 + user2 + user3 + user4);
                             mainwindow.Show();
+                            if (user4 == "Admin")
+                            {
+                                mainwindow.Users_Button.Visible = true;
+                                mainwindow.Rooms_button.Visible = true;
+                                mainwindow.Rooms_PictureBox.Visible = true;
+                                mainwindow.Users_PictureBox.Visible = true;
+                                mainwindow.User_Label.Text = user1;
+                                mainwindow.changePasswordToolStripMenuItem.Visible = true;
+                                mainwindow.manageRoomsToolStripMenuItem.Visible = true;
+                                mainwindow.manageUsersToolStripMenuItem.Visible = true;
+                            }
+                            else
+                            {
 
+                                mainwindow.User_Label.Text = user1;
+                            
+                            }
+                            
+                            
                         }
-                        else
-                            MessageBox.Show("username or password is uncorrect try again!");
+  
+                       
+
+                        
+
+                        
+
                     }
                     
                 
@@ -138,13 +151,14 @@ namespace Hotel_Management_System
             }
                 
         }
-       
 
+      
         
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'my_DataBaseDataSet1.Users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.my_DataBaseDataSet1.Users);
+            
 
         }
 
@@ -165,6 +179,31 @@ namespace Hotel_Management_System
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void Login_button_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+
+                ValidateUser();
+                this.Visible = false;
+
+            }
+
+        }
+
+        private void textBox2_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+
+                ValidateUser();
+                this.Visible = false;
+
+
+            }
 
         }
 

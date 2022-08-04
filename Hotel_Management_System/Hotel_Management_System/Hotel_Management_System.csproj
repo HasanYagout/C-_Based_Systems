@@ -71,6 +71,17 @@
     <Compile Include="CheckIn.Designer.cs">
       <DependentUpon>CheckIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="checkoutdata.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>checkoutdata.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOutTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckOutTable.Designer.cs">
+      <DependentUpon>CheckOutTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +144,12 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservation.Designer.cs">
+      <DependentUpon>Reservation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users_dataset.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -143,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CheckOut.resx">
       <DependentUpon>CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckOutTable.resx">
+      <DependentUpon>CheckOutTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -169,6 +189,20 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reservation.resx">
+      <DependentUpon>Reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="checkoutdata.xsc">
+      <DependentUpon>checkoutdata.xsd</DependentUpon>
+    </None>
+    <None Include="checkoutdata.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>checkoutdata.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="checkoutdata.xss">
+      <DependentUpon>checkoutdata.xsd</DependentUpon>
+    </None>
     <None Include="My_DataBaseDataSet.xsc">
       <DependentUpon>My_DataBaseDataSet.xsd</DependentUpon>
     </None>
@@ -284,6 +318,16 @@
       <DependentUpon>My_DataBase.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\logout %284%291.png" />
+    <None Include="Resources\check-in.png" />
+    <None Include="Resources\bedroom.png" />
+    <None Include="Resources\man.png" />
+    <None Include="Resources\logout %284%29.png" />
+    <None Include="Resources\check-out.png" />
+    <None Include="Resources\check-out %281%29.png" />
+    <None Include="Resources\logout %282%29.png" />
+    <None Include="Resources\logout %281%29.png" />
+    <None Include="Resources\logout.png" />
     <None Include="Resources\Titanium.jpg" />
     <None Include="Resources\Pinot Noir.jpg" />
     <None Include="Resources\gradient-blue.jpg" />

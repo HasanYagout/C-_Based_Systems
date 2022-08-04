@@ -25,7 +25,8 @@ namespace Hotel_Management_System
         public Register()
         {
             InitializeComponent();
-            dataGridView1.DataSource = GetUsers();
+            buttons();
+            Clear_Button.Enabled = false;
         }
 
         public static DataTable GetUsers()
@@ -88,13 +89,17 @@ namespace Hotel_Management_System
 
         private void Register_Sign_Up_Button_Click(object sender, EventArgs e)
         {
-            Register user1 = new Register();
-            user1.user = Register_Name_TextBox.Text;
-            user1.pass = Register_Password_TextBox.Text;
+            try {
+            
+                if((Name_TextBox.Text.Length > 3 && Name_TextBox.Text.Length < 10 && Password_TextBox.Text.Length > 7 && Password_TextBox.Text.Length < 13 && Password_TextBox.Text.Equals(ConfirmPassword_TextBox.Text)))
+                {
+                
+                  Register user1 = new Register();
+            user1.user = Name_TextBox.Text;
+            user1.pass = Password_TextBox.Text;
             user1.sta = "false";
             user1.pos = "user";
             bool success = InsertUser(user1);
-            dataGridView1.DataSource = GetUsers();
             if (success)
             {
 
@@ -103,6 +108,29 @@ namespace Hotel_Management_System
             }
             else
                 MessageBox.Show(@"error occured. please try again...");
+                }
+                if (Name_TextBox.Text.Length < 3 || Name_TextBox.Text.Length > 9)
+                {
+
+                    MessageBox.Show("name should be at least 3 charachters");
+                }
+                if (Password_TextBox.Text.Length < 8 || Password_TextBox.Text.Length > 12)
+                {
+                    MessageBox.Show("password should be from 8 to 12  charachters");
+
+                }
+                if (!Password_TextBox.Text.Equals(ConfirmPassword_TextBox.Text))
+                {
+                    MessageBox.Show("password and confirm password should be the same");
+                }
+            
+            }
+            catch (Exception ex){
+
+                MessageBox.Show(ex.Message);
+            }
+
+          
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -115,6 +143,68 @@ namespace Hotel_Management_System
             // TODO: This line of code loads data into the 'my_DataBaseDataSet5.Users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.my_DataBaseDataSet5.Users);
 
+        }
+
+        private void Register_Load_1(object sender, EventArgs e)
+        {
+
+        }
+        public void clear()
+        {
+
+            Name_TextBox.Text = "";
+            Password_TextBox.Text = "";
+            ConfirmPassword_TextBox.Text="";
+
+        
+        }
+
+        private void Clear_Button_Click(object sender, EventArgs e)
+        {
+            Clear_Button.Enabled = false;
+            clear();
+        }
+
+
+        public void buttons()
+        {
+            if (string.IsNullOrEmpty(Name_TextBox.Text) || string.IsNullOrEmpty(Password_TextBox.Text) || string.IsNullOrEmpty(ConfirmPassword_TextBox.Text))
+            {
+                SignUp_Button.Enabled = false;
+                Clear_Button.Enabled = true;
+            }
+
+            if (string.IsNullOrEmpty(Name_TextBox.Text) && string.IsNullOrEmpty(Password_TextBox.Text) && string.IsNullOrEmpty(ConfirmPassword_TextBox.Text))
+            {
+                SignUp_Button.Enabled = false;
+                Clear_Button.Enabled = false;
+            
+            }
+            if (!string.IsNullOrEmpty(Name_TextBox.Text) && !string.IsNullOrEmpty(Password_TextBox.Text) && !string.IsNullOrEmpty(ConfirmPassword_TextBox.Text)&&Password_TextBox.Text.Equals(ConfirmPassword_TextBox.Text))
+            {
+                SignUp_Button.Enabled = true;
+            }
+            
+        
+        }
+        private void Name_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            buttons();
+        }
+
+        private void Password_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            buttons();
+        }
+
+        private void ConfirmPassword_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            buttons();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
 

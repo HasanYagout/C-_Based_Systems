@@ -29,33 +29,35 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Username_Label = new System.Windows.Forms.Label();
+            this.ID_Label = new System.Windows.Forms.Label();
+            this.UserName_TextBox = new System.Windows.Forms.TextBox();
+            this.Password_TextBox = new System.Windows.Forms.TextBox();
+            this.Password_Label = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Add_Button = new System.Windows.Forms.Button();
+            this.Update_Button = new System.Windows.Forms.Button();
+            this.Clear_Button = new System.Windows.Forms.Button();
+            this.DataGridView = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.positionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.users_dataset = new Hotel_Management_System.Users_dataset();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.Position_ComboBox = new System.Windows.Forms.ComboBox();
+            this.Position_Label = new System.Windows.Forms.Label();
             this.my_DataBaseDataSet5 = new Hotel_Management_System.My_DataBaseDataSet5();
             this.myDataBaseDataSet5BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.my_DataBaseDataSet4 = new Hotel_Management_System.My_DataBaseDataSet4();
             this.myDataBaseDataSet4BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new Hotel_Management_System.Users_datasetTableAdapters.UsersTableAdapter();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.DBID_Label = new System.Windows.Forms.Label();
+            this.Access_Label = new System.Windows.Forms.Label();
+            this.Access_ComboBox = new System.Windows.Forms.ComboBox();
+            this.ConfirmPassword_Label = new System.Windows.Forms.Label();
+            this.ConfirmPassword_TextBox = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.users_dataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.my_DataBaseDataSet5)).BeginInit();
@@ -64,108 +66,131 @@
             ((System.ComponentModel.ISupportInitialize)(this.myDataBaseDataSet4BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // Username_Label
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 88);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "username";
+            this.Username_Label.AutoSize = true;
+            this.Username_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Username_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Username_Label.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.Username_Label.Location = new System.Drawing.Point(43, 110);
+            this.Username_Label.Name = "Username_Label";
+            this.Username_Label.Size = new System.Drawing.Size(132, 29);
+            this.Username_Label.TabIndex = 0;
+            this.Username_Label.Text = "Username";
             // 
-            // label2
+            // ID_Label
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(30, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "ID";
+            this.ID_Label.AutoSize = true;
+            this.ID_Label.BackColor = System.Drawing.Color.Transparent;
+            this.ID_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_Label.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.ID_Label.Location = new System.Drawing.Point(43, 49);
+            this.ID_Label.Name = "ID_Label";
+            this.ID_Label.Size = new System.Drawing.Size(38, 29);
+            this.ID_Label.TabIndex = 1;
+            this.ID_Label.Text = "ID";
             // 
-            // textBox1
+            // UserName_TextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(138, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 2;
+            this.UserName_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserName_TextBox.Location = new System.Drawing.Point(196, 110);
+            this.UserName_TextBox.Name = "UserName_TextBox";
+            this.UserName_TextBox.Size = new System.Drawing.Size(176, 32);
+            this.UserName_TextBox.TabIndex = 2;
+            this.UserName_TextBox.TextChanged += new System.EventHandler(this.UserName_TextBox_TextChanged);
+            this.UserName_TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UserName_TextBox_KeyPress);
             // 
-            // textBox2
+            // Password_TextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(138, 137);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 2;
+            this.Password_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password_TextBox.Location = new System.Drawing.Point(196, 226);
+            this.Password_TextBox.Name = "Password_TextBox";
+            this.Password_TextBox.Size = new System.Drawing.Size(176, 32);
+            this.Password_TextBox.TabIndex = 2;
+            this.Password_TextBox.TextChanged += new System.EventHandler(this.Password_TextBox_TextChanged);
             // 
-            // label3
+            // Password_Label
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 137);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 20);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "password";
+            this.Password_Label.AutoSize = true;
+            this.Password_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Password_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password_Label.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.Password_Label.Location = new System.Drawing.Point(43, 228);
+            this.Password_Label.Name = "Password_Label";
+            this.Password_Label.Size = new System.Drawing.Size(128, 29);
+            this.Password_Label.TabIndex = 1;
+            this.Password_Label.Text = "Password";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 108);
+            this.label4.Location = new System.Drawing.Point(84, 130);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 17);
             this.label4.TabIndex = 1;
             // 
-            // button1
+            // Add_Button
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(34, 275);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(225, 30);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "add";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Add_Button.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Add_Button.FlatAppearance.BorderSize = 0;
+            this.Add_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Add_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add_Button.ForeColor = System.Drawing.Color.White;
+            this.Add_Button.Location = new System.Drawing.Point(151, 603);
+            this.Add_Button.Name = "Add_Button";
+            this.Add_Button.Size = new System.Drawing.Size(176, 42);
+            this.Add_Button.TabIndex = 3;
+            this.Add_Button.Text = "Add";
+            this.Add_Button.UseVisualStyleBackColor = false;
+            this.Add_Button.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // Update_Button
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(34, 315);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(225, 30);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "update";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Update_Button.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Update_Button.FlatAppearance.BorderSize = 0;
+            this.Update_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Update_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Update_Button.ForeColor = System.Drawing.Color.White;
+            this.Update_Button.Location = new System.Drawing.Point(355, 603);
+            this.Update_Button.Name = "Update_Button";
+            this.Update_Button.Size = new System.Drawing.Size(176, 42);
+            this.Update_Button.TabIndex = 3;
+            this.Update_Button.Text = "Update";
+            this.Update_Button.UseVisualStyleBackColor = false;
+            this.Update_Button.Click += new System.EventHandler(this.Update_Button_Click);
             // 
-            // button3
+            // Clear_Button
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(34, 355);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(225, 30);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "clear";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.Clear_Button.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Clear_Button.FlatAppearance.BorderSize = 0;
+            this.Clear_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Clear_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clear_Button.ForeColor = System.Drawing.Color.White;
+            this.Clear_Button.Location = new System.Drawing.Point(563, 603);
+            this.Clear_Button.Name = "Clear_Button";
+            this.Clear_Button.Size = new System.Drawing.Size(176, 42);
+            this.Clear_Button.TabIndex = 3;
+            this.Clear_Button.Text = "Clear";
+            this.Clear_Button.UseVisualStyleBackColor = false;
+            this.Clear_Button.Click += new System.EventHandler(this.button3_Click);
             // 
-            // dataGridView1
+            // DataGridView
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DataGridView.AutoGenerateColumns = false;
+            this.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.usernameDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn,
             this.positionDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.usersBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(288, 13);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(492, 285);
-            this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
+            this.DataGridView.DataSource = this.usersBindingSource;
+            this.DataGridView.Location = new System.Drawing.Point(442, 110);
+            this.DataGridView.Name = "DataGridView";
+            this.DataGridView.RowTemplate.Height = 24;
+            this.DataGridView.Size = new System.Drawing.Size(446, 285);
+            this.DataGridView.TabIndex = 4;
+            this.DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.DataGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -202,26 +227,31 @@
             this.users_dataset.DataSetName = "Users_dataset";
             this.users_dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // comboBox1
+            // Position_ComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.Position_ComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Position_ComboBox.FormattingEnabled = true;
+            this.Position_ComboBox.Items.AddRange(new object[] {
             "Admin",
             "User\t"});
-            this.comboBox1.Location = new System.Drawing.Point(138, 225);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 5;
+            this.Position_ComboBox.Location = new System.Drawing.Point(196, 365);
+            this.Position_ComboBox.Name = "Position_ComboBox";
+            this.Position_ComboBox.Size = new System.Drawing.Size(176, 34);
+            this.Position_ComboBox.TabIndex = 5;
+            this.Position_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Position_ComboBox_SelectedIndexChanged);
+            this.Position_ComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
             // 
-            // label5
+            // Position_Label
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(30, 229);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 20);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "position";
+            this.Position_Label.AutoSize = true;
+            this.Position_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Position_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Position_Label.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.Position_Label.Location = new System.Drawing.Point(43, 366);
+            this.Position_Label.Name = "Position_Label";
+            this.Position_Label.Size = new System.Drawing.Size(108, 29);
+            this.Position_Label.TabIndex = 1;
+            this.Position_Label.Text = "Position";
             // 
             // my_DataBaseDataSet5
             // 
@@ -247,61 +277,93 @@
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
-            // label6
+            // DBID_Label
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(134, 27);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 20);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "null";
+            this.DBID_Label.AutoSize = true;
+            this.DBID_Label.BackColor = System.Drawing.Color.Transparent;
+            this.DBID_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DBID_Label.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.DBID_Label.Location = new System.Drawing.Point(191, 49);
+            this.DBID_Label.Name = "DBID_Label";
+            this.DBID_Label.Size = new System.Drawing.Size(55, 29);
+            this.DBID_Label.TabIndex = 6;
+            this.DBID_Label.Text = "null";
             // 
-            // label7
+            // Access_Label
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(30, 189);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 20);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "access";
+            this.Access_Label.AutoSize = true;
+            this.Access_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Access_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Access_Label.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.Access_Label.Location = new System.Drawing.Point(43, 169);
+            this.Access_Label.Name = "Access_Label";
+            this.Access_Label.Size = new System.Drawing.Size(96, 29);
+            this.Access_Label.TabIndex = 7;
+            this.Access_Label.Text = "Access";
             // 
-            // comboBox2
+            // Access_ComboBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.Access_ComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Access_ComboBox.FormattingEnabled = true;
+            this.Access_ComboBox.Items.AddRange(new object[] {
             "True",
             "False"});
-            this.comboBox2.Location = new System.Drawing.Point(138, 185);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 8;
+            this.Access_ComboBox.Location = new System.Drawing.Point(196, 167);
+            this.Access_ComboBox.Name = "Access_ComboBox";
+            this.Access_ComboBox.Size = new System.Drawing.Size(176, 34);
+            this.Access_ComboBox.TabIndex = 8;
+            this.Access_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Access_ComboBox_SelectedIndexChanged);
+            this.Access_ComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox2_KeyPress);
+            // 
+            // ConfirmPassword_Label
+            // 
+            this.ConfirmPassword_Label.AutoSize = true;
+            this.ConfirmPassword_Label.BackColor = System.Drawing.Color.Transparent;
+            this.ConfirmPassword_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmPassword_Label.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.ConfirmPassword_Label.Location = new System.Drawing.Point(43, 287);
+            this.ConfirmPassword_Label.Name = "ConfirmPassword_Label";
+            this.ConfirmPassword_Label.Size = new System.Drawing.Size(128, 58);
+            this.ConfirmPassword_Label.TabIndex = 1;
+            this.ConfirmPassword_Label.Text = "Confirm\r\nPassword";
+            // 
+            // ConfirmPassword_TextBox
+            // 
+            this.ConfirmPassword_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmPassword_TextBox.Location = new System.Drawing.Point(196, 304);
+            this.ConfirmPassword_TextBox.Name = "ConfirmPassword_TextBox";
+            this.ConfirmPassword_TextBox.Size = new System.Drawing.Size(176, 32);
+            this.ConfirmPassword_TextBox.TabIndex = 2;
+            this.ConfirmPassword_TextBox.TextChanged += new System.EventHandler(this.Password_TextBox_TextChanged);
             // 
             // ManageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 411);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.BackgroundImage = global::Hotel_Management_System.Properties.Resources.Lawrencium;
+            this.ClientSize = new System.Drawing.Size(900, 700);
+            this.Controls.Add(this.Access_ComboBox);
+            this.Controls.Add(this.Access_Label);
+            this.Controls.Add(this.DBID_Label);
+            this.Controls.Add(this.Position_ComboBox);
+            this.Controls.Add(this.DataGridView);
+            this.Controls.Add(this.Clear_Button);
+            this.Controls.Add(this.Update_Button);
+            this.Controls.Add(this.Add_Button);
+            this.Controls.Add(this.ConfirmPassword_TextBox);
+            this.Controls.Add(this.Password_TextBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Position_Label);
+            this.Controls.Add(this.ConfirmPassword_Label);
+            this.Controls.Add(this.Password_Label);
+            this.Controls.Add(this.UserName_TextBox);
+            this.Controls.Add(this.ID_Label);
+            this.Controls.Add(this.Username_Label);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManageUsers";
             this.Text = "ManageUsers";
             this.Load += new System.EventHandler(this.ManageUsers_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.users_dataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.my_DataBaseDataSet5)).EndInit();
@@ -315,31 +377,33 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label Username_Label;
+        private System.Windows.Forms.Label ID_Label;
+        private System.Windows.Forms.TextBox UserName_TextBox;
+        private System.Windows.Forms.TextBox Password_TextBox;
+        private System.Windows.Forms.Label Password_Label;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button Add_Button;
+        private System.Windows.Forms.Button Update_Button;
+        private System.Windows.Forms.Button Clear_Button;
+        private System.Windows.Forms.DataGridView DataGridView;
         private System.Windows.Forms.BindingSource myDataBaseDataSet4BindingSource;
         private My_DataBaseDataSet4 my_DataBaseDataSet4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox Position_ComboBox;
+        private System.Windows.Forms.Label Position_Label;
         private My_DataBaseDataSet5 my_DataBaseDataSet5;
         private System.Windows.Forms.BindingSource myDataBaseDataSet5BindingSource;
         private Users_dataset users_dataset;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private Users_datasetTableAdapters.UsersTableAdapter usersTableAdapter;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label DBID_Label;
+        private System.Windows.Forms.Label Access_Label;
+        private System.Windows.Forms.ComboBox Access_ComboBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn positionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label ConfirmPassword_Label;
+        private System.Windows.Forms.TextBox ConfirmPassword_TextBox;
     }
 }

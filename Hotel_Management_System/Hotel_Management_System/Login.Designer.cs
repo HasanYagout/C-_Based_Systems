@@ -75,19 +75,18 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(117, 154);
-            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(266, 30);
+            this.textBox1.Size = new System.Drawing.Size(266, 36);
             this.textBox1.TabIndex = 4;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(117, 222);
-            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(266, 30);
+            this.textBox2.Size = new System.Drawing.Size(266, 36);
             this.textBox2.TabIndex = 5;
+            this.textBox2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyUp);
             // 
             // Login_button
             // 
@@ -107,6 +106,7 @@
             this.Login_button.Text = "Login";
             this.Login_button.UseVisualStyleBackColor = false;
             this.Login_button.Click += new System.EventHandler(this.Login_button_click);
+            this.Login_button.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Login_button_KeyUp);
             // 
             // errorProvider1
             // 
@@ -162,7 +162,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel1.Location = new System.Drawing.Point(114, 255);
+            this.linkLabel1.Location = new System.Drawing.Point(114, 271);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(61, 17);
             this.linkLabel1.TabIndex = 9;
